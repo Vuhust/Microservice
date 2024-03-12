@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from Git repository
-                echo 'Build failed! Deployment aborted.'
+                echo 'hello ---'
 
             }
         }
@@ -13,11 +13,13 @@ pipeline {
             steps {
                 echo 'Build failed! Deployment aborted.'
                 sh "echo 1"
+                sh "sudo docker ps -a"
+
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Build failed! Deployment aborted.'
+                echo 'deploy'
 
             }
         }
