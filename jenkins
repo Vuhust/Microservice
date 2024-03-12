@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from Git repository
+                echo 'Build failed! Deployment aborted.'
+
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Build failed! Deployment aborted.'
+
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Build failed! Deployment aborted.'
+
+            }
+        }
+    }
+    
+    post {
+        success {
+            // Notification for successful build
+            echo 'Build succeeded! Deployed successfully.'
+            // Add more actions here, such as sending an email notification
+        }
+        failure {
+            // Notification for failed build
+            echo 'Build failed! Deployment aborted.'
+            // Add more actions here, such as sending an email notification
+        }
+    }
+}
